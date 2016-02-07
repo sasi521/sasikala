@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<HTML>
+<HEAD>
+<SCRIPT>
+function palindrome(string)
+{
+    if (string == string.split('').reverse().join('')) 
+{
+        alert(string + ' is palindrome.');
+    }
+    
+else {
+        alert(string + ' is not palindrome.');
+    
+}
+}
+</script>
+<body>
+<script>
+var input = prompt("Enter a word");
+var output = palindrome(input);
+</script>
+</body>
+</html>

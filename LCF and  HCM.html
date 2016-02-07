@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<HTML>
+<HEAD>
+<SCRIPT>
+
+   function Hcf_twonums(val1,val2){
+	var temp,hcf;
+	if (val1>val2){
+		temp=val1;
+	}
+	else{
+		temp=val2;
+	}
+	for (var i=1;i<=temp;i++){
+		if (val1%i==0 && val2%i==0)
+			hcf =i;
+	}
+	return hcf;
+}
+alert(Hcf_twonums(12,15));
+
+function Lcm_twonums(val1,val2){
+	var hcf=Hcf_twonums(val1,val2);
+	res=val1*val2/hcf;
+	return res;
+}
+
+alert(Lcm_twonums(18,12));
+</script>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<HTML>
+<HEAD>
+<SCRIPT>
+function factorial(num){
+var fact =1;
+if(num >1){
+for(i =2;i<=num;++i)
+fact = fact * i;
+return fact;
+}
+else 
+{
+return fact;
+}
+}
+</script>
+<body>
+<script>
+var input = prompt("Enter a number");
+var output = factorial(input);
+document.write("the Factorial of " +input+"is :"+output);
+</script>
+</body>
+</html>

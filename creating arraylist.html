@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+</head>
+<body>
+<p id='demo'></p>
+<p id='demo1'></p>
+<p id='demo2'></p>
+<p id='demo3'></p>
+<p id='demo4'></p>
+<p id='demo5'></p>
+<script type="text/javascript">
+	function Arraylist(arr){
+		this.arr=arr;
+		this.index=0;
+	}
+debugger;
+	Arraylist.prototype.add=function(arrValue){
+       this.arr.push(arrValue);
+       return this.arr;
+	}
+	Arraylist.prototype.delete=function(arrValue){
+       this.arr.pop(arrValue);
+       return this.arr;
+	}
+	Arraylist.prototype.sort=function(arrValue){
+       this.arr.sort();
+       return this.arr;
+	}
+	Arraylist.prototype.reverse=function(arrValue){
+       this.arr.reverse();
+       return this.arr;
+	}
+	Arraylist.prototype.findindex=function(arrValue){
+       this.index=this.Arraylist.index(arrValue);
+        return this.index===-1 ? "Value not found" : this.index;
+    }
+    Arraylist.prototype.deleteitem= function(itemName){
+		this.index = this.arr.indexOf(itemName);
+		this.arr.splice(this.index,1);
+		return this.arr;
+	}
+	Arraylist.prototype.getitem= function(itemName){
+		this.index = this.arr.indexOf(itemName);
+		return this.index === -1 ? "Value not found" : this.arr[this.index];
+	}
+	// Arraylist.prototype.splice=function(param1,param2){
+ //       this.arr.splice(param1,param2);
+ //       return this.arr;
+	// }
+	// Arraylist.prototype.splice=function(){
+ //       this.index=this.Arraylist.index(arrValue);
+ //       return this.arr;
+	// }
+	// Arraylist.prototype.search=function(arrValue){
+       
+ //       return this.arr;
+	// }
+	// Arraylist.prototype.search=function(arrValue){
+	// 	var temp;
+	// 	for(var i=0; i<=temp.length;i++){
+	// 		
+	// 			return true;
+			
+	// 	}
+	// 	else{
+	// 	return false;
+	// }
+	// }
+	
+	
+	
+	var list=['Abhi','Sasi','Chinni','Paru','Vijay'];
+	var listed= new Arraylist(list);
+	document.getElementById('demo').innerHTML=listed.add('Abhi');
+	document.getElementById('demo1').innerHTML=listed.delete();
+	document.getElementById('demo2').innerHTML=listed.sort();
+	document.getElementById('demo3').innerHTML=listed.reverse();
+	document.getElementById('demo4').innerHTML=listed.deleteitem('Sasi');
+	document.getElementById('demo5').innerHTML=listed.getitem('Paru');
+	// document.getElementById('demo4').innerHTML=listed.search('shakthi');
+</script>
+</body>
+</html>
